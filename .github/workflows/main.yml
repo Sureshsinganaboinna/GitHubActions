@@ -1,26 +1,28 @@
 name: cicd workflow
 
-on:push
+on: 
+  push:
 
 jobs:
-   build:
+  build:
     runs-on: ubuntu-latest
     steps:
-     -name: Print build
-      run: echo 'build' 
+      - name: Print build
+        run: echo 'build'
 
-    test:
+  test:
     runs-on: windows-latest
     steps:
-     -name: Print test chrome
-      run: echo 'test chrome'
-      -name: print test edge
-       run: echo 'test edge'
+      - name: Print test chrome
+        run: echo 'test chrome'
+      - name: Print test edge
+        run: echo 'test edge'
 
-    deploy:
+  deploy:
     runs-on: windows-latest
-      steps:
-       -name: Print deploy
+    steps:
+      - name: Print deploy
         run: echo 'deploy'
+
     
     
