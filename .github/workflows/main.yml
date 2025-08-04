@@ -1,28 +1,12 @@
-name: cicd workflow
+name: PR Review Workflow
 
-on: 
-  workflow_dispatch
+on:
+  pull_request_review:
+    types: [submitted]
 
 jobs:
-  build:
+  review-check:
     runs-on: ubuntu-latest
     steps:
-      - name: Print build
-        run: echo 'build'
-
-  test:
-    runs-on: windows-latest
-    steps:
-      - name: Print test chrome
-        run: echo 'test chrome'
-      - name: Print test edge
-        run: echo 'test edge'
-
-  deploy:
-    runs-on: windows-latest
-    steps:
-      - name: Print deploy
-        run: echo 'deploy'
-
-    
-    
+      - name: Print review status
+        run: echo "A pull request review was submitted!"
