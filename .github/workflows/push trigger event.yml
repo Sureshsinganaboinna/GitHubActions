@@ -1,0 +1,11 @@
+name: push trigger
+
+on:
+  push:
+
+jobs:
+  deploy:
+    runs-on: windows-latest
+    steps:
+      - name: Print deploy
+        run: echo 'deploy'
