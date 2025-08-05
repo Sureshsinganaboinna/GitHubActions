@@ -1,8 +1,8 @@
 name: cicd workflow
 
 on: 
- [push,issues,pull_request]
-      
+  pull_request: 
+
 jobs:
   build:
     runs-on: ubuntu-latest
