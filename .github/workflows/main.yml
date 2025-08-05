@@ -1,9 +1,7 @@
 name: cicd workflow
 
 on: 
- push:
-   branches:
-      - develop
+ [push,issues,pull_request]
       
 jobs:
   build:
