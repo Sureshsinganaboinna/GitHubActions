@@ -1,11 +1,13 @@
-name: pull request trigger
+name: issues trigger
 
 on:
-  issues
+  issues:
 
-  jobs:
-    test:
-      runs-on: ubuntu-latest
-      steps:
-         -name: Print test
-          run: echo 'test'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print test
+        run: echo 'test'
+
+
