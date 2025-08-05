@@ -1,0 +1,11 @@
+name: pull request trigger
+
+on:
+  issues
+
+  jobs:
+    test:
+      runs-on: ubuntu-latest
+      steps:
+         -name: Print test
+          run: echo 'test'
