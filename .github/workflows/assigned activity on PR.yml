@@ -3,7 +3,7 @@ name: assigned_activity_type_on_PR
 on: 
   pull_request:
      types: assigned
-  
+   
 jobs: 
 
   build:
